@@ -19,7 +19,7 @@ class JsendController {
 
     @PostMapping("/fail")
     fun fail(@RequestBody @Valid sistemaDto: SistemaDto): JSendResponse {
-        // Este endpoint se usaría si decides manejar algún otro tipo de error
+
         return JSendResponse.fail(
             data = sistemaDto,
             message = "Hubo un problema con la solicitud"

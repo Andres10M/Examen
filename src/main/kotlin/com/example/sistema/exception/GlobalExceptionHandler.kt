@@ -11,7 +11,6 @@ import org.springframework.validation.FieldError
 @RestControllerAdvice
 class GlobalExceptionHandler {
 
-    // Este método maneja las excepciones de validación (cuando @Valid falla)
     @ExceptionHandler(MethodArgumentNotValidException::class)
     fun handleValidationException(ex: MethodArgumentNotValidException): ResponseEntity<JSendResponse> {
         val errors = ex.bindingResult.allErrors.map {
@@ -20,7 +19,7 @@ class GlobalExceptionHandler {
 
         val errorMessage = errors.joinToString(", ") { "${it.first}: ${it.second}" }
 
-        // Retorna la respuesta en formato JSendResponse con estado 'fail'
+
         val response = JSendResponse.fail(
             data = errorMessage,
             message = "Datos no válidos"
