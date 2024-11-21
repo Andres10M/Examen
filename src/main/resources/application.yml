@@ -1,5 +1,4 @@
 
-
 server:
   port: 8081
   error:
@@ -18,7 +17,7 @@ spring:
     schemas: public
 
   datasource:
-    url: jdbc:postgresql://ruby.db.elephantsql.com:5432/nbyvlipx?socketTimeout=3
-    username: nbyvlipx
-    password: OVovGnk44pZsrZr5aVCMagSMBMq4O6Wf
+    url: jdbc:postgresql://lallah.db.elephantsql.com:5432/rbmxkekt?socketTimeout=3
+    username: rbmxkekt
+    password: neUrw6AYdHv3UiWhrHM-8jIoEKjRo1f_
     driverClassName: org.postgresql.Driver
