@@ -18,17 +18,17 @@ class SistemaService {
     @Autowired
     lateinit var empleadosAsistenciaVistaRepository: EmpleadosAsistenciaVistaRepository
 
-    // Método para obtener todos los sistemas
+
     fun getSistemas(): List<Sistema> {
         return sistemaRepository.findAll()
     }
 
-    // Método para obtener los registros de la vista 'empleados_asistencia_vista'
+
     fun getAsistenciaVista(): List<EmpleadosAsistenciaVista> {
         return empleadosAsistenciaVistaRepository.findAll()
     }
 
-    // Método para guardar un nuevo sistema
+
     fun save(sistemaDto: SistemaDto): Sistema {
         val sistema = SistemaMapper.toEntity(sistemaDto)
         return sistemaRepository.save(sistema)

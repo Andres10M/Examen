@@ -30,7 +30,7 @@ class SistemaController {
     @GetMapping("/vista")
     fun getAsistenciaVista(): ResponseEntity<*> {
         return try {
-            val vistaData = sistemaService.getAsistenciaVista() // Llama al servicio que consulta la vista
+            val vistaData = sistemaService.getAsistenciaVista()
             ResponseEntity.ok(JSendResponse.success(data = vistaData))
         } catch (e: Exception) {
             ResponseEntity(
